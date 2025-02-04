@@ -2,7 +2,7 @@
 
 ChainShare is a blockchain-based ecosystem for privacy-preserving and ownership-aware document sharing in Large Language Model (LLM) applications. The system enables secure knowledge sharing while ensuring fair compensation through smart contracts.
 
-The theoretical foundation and implementation details of this system are described in detail in the associated master's thesis [Nievelstein, 2024]. The system implements a novel approach to document sharing that combines client-side processing, chunk-level encryption, and blockchain-based access control to create a trustless knowledge marketplace.
+The theoretical foundation and implementation details of this system are described in detail in the associated master's thesis. The system implements a novel approach to document sharing that combines client-side processing, chunk-level encryption, and blockchain-based access control to create a trustless knowledge marketplace.
 
 ## Academic Citation
 
@@ -70,7 +70,7 @@ pip install -r requirements.txt
 - Copy `.env.example` to `.env` in each component directory
 - Update with your specific configurations
 
-4. Start development servers:
+4. Start development servers
 
 ## Documentation
 
@@ -84,7 +84,7 @@ Each component has its own detailed README in its respective directory:
 
 ## Research Publications
 
-This work has been developed as part of a master's thesis at RWTH Aachen University in cooperation with Fraunhofer FIT. The system architecture and evaluation results are being prepared for submission to relevant academic conferences.
+This work has been developed as part of a master's thesis at RWTH Aachen University in cooperation with Fraunhofer FIT.
 
 ## Research Opportunities
 
