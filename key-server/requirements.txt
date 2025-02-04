@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+duckdb
+python-dotenv
+web3
+python-multipart
+gunicorn

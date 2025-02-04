@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+chromadb>=0.3.22
+pydantic
+gunicorn
+python-dotenv
+duckdb
+pycryptodome
+web3
+requests
+duckdb
+pycryptodome
+web3

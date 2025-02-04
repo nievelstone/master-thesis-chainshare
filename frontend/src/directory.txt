@@ -1,0 +1,79 @@
+├── App.jsx
+├── assets
+│   └── react.svg
+├── components
+│   ├── BackgroundAnimation.jsx
+│   ├── MetaMaskLogo.css
+│   ├── MetaMaskLogo.jsx
+│   ├── Navigation.jsx
+│   ├── PageContainer.jsx
+│   ├── chat
+│   │   ├── ChatInput.jsx
+│   │   ├── ChatMessages.jsx
+│   │   ├── ChatSidebar.jsx
+│   │   ├── DocumentReference.jsx
+│   │   ├── LoadingIndicator.jsx
+│   │   ├── MessageCard.jsx
+│   │   └── PurchaseDialog.jsx
+│   ├── documents
+│   │   ├── DocumentCard.jsx
+│   │   ├── DocumentGrid.jsx
+│   │   ├── DocumentHeader.jsx
+│   │   ├── DocumentPurchases.jsx
+│   │   ├── DocumentRating.jsx
+│   │   ├── DocumentRatingDisplay.jsx
+│   │   ├── ErrorState.jsx
+│   │   ├── LoadingState.jsx
+│   │   └── styled
+│   │       └── DocumentPageWrapper.jsx
+│   ├── layouts
+│   │   └── MainLayout.jsx
+│   ├── routing
+│   │   └── ProtectedRoute.jsx
+│   ├── token
+│   │   ├── TokenActions.jsx
+│   │   ├── TokenActivity.jsx
+│   │   ├── TokenBalance.jsx
+│   │   ├── TokenBuyDialog.jsx
+│   │   ├── TokenRequirementAlert.jsx
+│   │   ├── TokenTransactionHistory.jsx
+│   │   ├── TokenWithdrawDialog.jsx
+│   │   └── styled
+│   │       └── TokenComponents.jsx
+│   └── upload
+│       ├── CompletionStatus.jsx
+│       ├── FileSelection.jsx
+│       ├── ProcessingStatus.jsx
+│       ├── TitleInput.jsx
+│       └── UploadStepper.jsx
+├── config.js
+├── context
+│   └── AuthContext.jsx
+├── directory.txt
+├── functions
+│   └── helpers.jsx
+├── index.css
+├── main.jsx
+├── pages
+│   ├── Chat.jsx
+│   ├── LandingPage.jsx
+│   ├── Login.jsx
+│   ├── MyDocuments.jsx
+│   ├── Token.jsx
+│   ├── Upload.jsx
+│   └── documentProcessingFunctions.jsx
+├── services
+│   ├── api
+│   │   ├── apiClient.js
+│   │   ├── authService.js
+│   │   ├── chatService.js
+│   │   ├── documentService.js
+│   │   ├── endpoints.js
+│   │   ├── errors.js
+│   │   ├── tokenService.js
+│   │   └── userService.js
+│   └── tfService.js
+└── styles
+    └── theme.js
+
+17 directories, 61 files

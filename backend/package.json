@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@azure/identity": "^4.5.0",
+    "@azure/openai": "^2.0.0-beta.2",
+    "@hashgraph/sdk": "^2.52.0",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "duckdb": "^1.1.1",
+    "ethereumjs-util": "^7.1.5",
+    "ethers": "^6.13.4",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "openai": "^4.68.4"
+  }
+}

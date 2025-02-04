@@ -1,0 +1,7 @@
+body, #root {
+    height: 100vh;
+  }
+  
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
