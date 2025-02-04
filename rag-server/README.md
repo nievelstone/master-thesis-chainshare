@@ -93,14 +93,6 @@ The server implements several security measures:
 - Secure integration with Hedera smart contracts
 - Encrypted storage of sensitive data
 
-## Contributing
-
-Please refer to the main ChainShare repository's contributing guidelines.
-
-## License
-
-This project is part of the ChainShare ecosystem. See the main repository for licensing information.
-
 ## Citation
 
 If you use this component in your research, please cite the ChainShare project:

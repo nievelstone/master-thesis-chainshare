@@ -1,91 +1,69 @@
-# Hedera Hardhat Example Project
+# ChainShare Smart Contracts
 
-This Hedera Hardhat Example Project offers boilerplate code for testing and deploying smart contracts via Hardhat. It includes configuration for both community-hosted and local ([Hedera Local Node](https://github.com/hashgraph/hedera-local-node)) instances of the [Hedera JSON RPC Relay](https://github.com/hashgraph/hedera-json-rpc-relay). 
+This repository contains the smart contract implementations for the ChainShare ecosystem, a blockchain-based solution for privacy-preserving and ownership-aware document sharing in LLM applications. The contracts are deployed on the Hedera network and manage the key distribution and reward mechanism for document sharing.
 
-:fire: Check out the step-by-step tutorial [here](https://docs.hedera.com/hedera/tutorials/smart-contracts/deploy-a-smart-contract-using-hardhat-and-hedera-json-rpc-relays).
+## Smart Contract Architecture
 
-## Project Files and Folders
+The repository implements two main contracts:
 
-- `hardhat.config.js` - This is the configuration file for your Hardhat project development environment. It centralizes and defines various settings like Hedera networks, Solidity compiler versions, plugins, and tasks.
+- `KeyContract`: Manages the distribution of encryption keys and handles the reputation-based reward system
+- `ChainShareToken`: ERC20 token implementation for the reward mechanism
 
-- `/contracts` - This folder holds all the Solidity smart contract files that make up the core logic of your dApp. Contracts are written in `.sol` files.
+### KeyContract Features
 
-- `/test` - This folder contains test scripts that help validate your smart contracts' functionality. These tests are crucial for ensuring that your contracts behave as expected.
-  
--  `/scripts` - This folder contains essential JavaScript files for tasks such as deploying smart contracts to the Hedera network. 
+- Request and publish chunk encryption keys
+- Reputation-based reward distribution system
+- Key owner rating mechanism
+- Token deposit and withdrawal management
 
-- `.env.example` - This file is contains the environment variables needed by the project. Copy this file to a `.env` file and fill in the actual values before starting the development server or deploying smart contracts. To expedite your test setup and deployment, some variables are pre-filled in this example file.
-  
-## Setup
+## Prerequisites
 
-1. Clone this repo to your local machine:
+- Node.js >= 18
+- Hardhat development environment
+- Hedera testnet account
+- MetaMask wallet
 
-```shell
-git clone https://github.com/hashgraph/hedera-hardhat-example-project.git
-```
+## Installation
 
-2. Once you've cloned the repository, open your IDE terminal and navigate to the root directory of the project:
-
-```shell
-cd hedera-hardhat-example-project
-```
-
-3. Run the following command to install all the necessary dependencies:
-
-```shell
+1. Install dependencies:
+```bash
 npm install
 ```
 
-4. Get your Hedera testnet account hex encoded private key from the [Hedera Developer Portal](https://portal.hedera.com/register) and update the `.env.example` `TESTNET_OPERATOR_PRIVATE_KEY`
-
-5. Rename `.env.example` to `.env`
-
-6. Run the test script from the root directory of the project. The default network is set to "local."
-
-```shell
-# runs test on default network
-npx hardhat test
-
-# runs test on testnet 
-npx hardhat test --network testnet
+2. Create a `.env` file with the following variables:
+```env
+LOCAL_ENDPOINT="http://localhost:7546"
+LOCAL_PRIVATE_KEY="your_local_private_key"
+TESTNET_ENDPOINT="your_hashio_testnet_endpoint"
+TESTNET_PRIVATE_KEY="your_testnet_private_key"
 ```
 
-Expect an output similar to the following:
-```shell
-  RPC
-The address 0xe0b73F64b0de6032b193648c08899f20b5A6141D has 10000000000000000000000 weibars
-    ✔ should be able to get the account balance (1678ms)
-Greeter deployed to: 0xD9d0c5C0Ff85758BdF05A7636F8036d4D065F5B6
-    ✔ should be able to deploy a contract (11456ms)
-Contract call result: initial_msg
-    ✔ should be able to make a contract view call (1249ms)
-Updated call result: updated_msg
-Contract call result: updated_msg
-    ✔ should be able to make a contract call (6806ms)
+## Contract Details
 
+### KeyContract
 
-  4 passing (22s)
-```
+The KeyContract manages the distribution of encryption keys for document chunks and implements a reputation-based reward system. Key features include:
 
-7. Run the following command to deploy the smart contract. 
-```shell
-# deploys to the default network
-npx hardhat deploy-contract
+- **Chunk Key Management**: Maps chunk IDs to their corresponding encryption keys
+- **Request Handling**: Tracks requested chunks per key server
+- **Reputation System**: Maintains key owner ratings and reputation scores
+- **Token Integration**: Handles ERC20 token deposits and withdrawals for rewards
 
-# deploys to testnet
-npx hardhat deploy-contract --network testnet
-```
+### Security Considerations
 
-# Contributing
-Contributions are welcome. Please see the
-[contributing guide](https://github.com/hashgraph/.github/blob/main/CONTRIBUTING.md)
-to see how you can get involved.
+- The contract implements access control through the `isOwner` modifier
+- Key publication requires verification against requested chunk IDs
+- Reputation scores affect reward distribution
+- Token transfers are protected by OpenZeppelin's ERC20 implementation
 
-# Code of Conduct
-This project is governed by the
-[Contributor Covenant Code of Conduct](https://github.com/hashgraph/.github/blob/main/CODE_OF_CONDUCT.md). By
-participating, you are expected to uphold this code of conduct. Please report unacceptable behavior
-to [oss@hedera.com](mailto:oss@hedera.com).
+## Integration with ChainShare
 
-# License
-[Apache License 2.0](LICENSE)
+These smart contracts form part of the larger ChainShare ecosystem:
+
+- **Frontend**: Interacts with contracts through Web3 interface
+- **Key Server**: Publishes chunk keys through contract calls
+- **RAG Server**: Verifies document ownership through contract queries
+
+## Part of ChainShare
+
+This repository is part of the ChainShare project, a master thesis implementation at RWTH Aachen University. For more information, see the [main repository](https://github.com/nievelstone/master-thesis-chainshare).

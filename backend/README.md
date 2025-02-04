@@ -132,14 +132,6 @@ The server will run on `http://localhost:3001` by default.
 npm test
 ```
 
-## Contributing
-
-Please read [CONTRIBUTING.md](../CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## License
-
-This project is licensed under the terms specified in the root repository.
-
 ## Acknowledgments
 
 This backend is part of the ChainShare project, developed as part of a master's thesis at RWTH Aachen University in cooperation with Fraunhofer FIT.

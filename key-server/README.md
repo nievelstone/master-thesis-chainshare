@@ -101,13 +101,6 @@ python key_server.py
 
 The server will run on `http://localhost:8001` by default.
 
-## Testing
-
-Run the test suite:
-```bash
-pytest tests/
-```
-
 ## Integration with ChainShare
 
 This key server is part of the larger ChainShare ecosystem. It works in conjunction with:
@@ -122,12 +115,3 @@ This key server is part of the larger ChainShare ecosystem. It works in conjunct
 - Regularly rotate operator keys
 - Monitor smart contract interactions for unusual patterns
 - Implement rate limiting for production deployments
-- Use HTTPS in production environments
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request

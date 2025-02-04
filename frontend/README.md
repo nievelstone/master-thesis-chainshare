@@ -67,19 +67,7 @@ src/
 npm install
 ```
 
-2. Configure environment:
-```bash
-cp .env.example .env
-```
-
-Update the following variables in `.env`:
-```
-VITE_API_URL=your_backend_url
-VITE_KEY_SERVER_URL=your_keyserver_url
-VITE_TOKEN_ADDRESS=your_token_contract_address
-```
-
-3. Start development server:
+2. Start development server:
 ```bash
 npm run dev
 ```
@@ -109,43 +97,6 @@ Document processing happens entirely client-side to ensure privacy:
 - Content remains encrypted until legitimately purchased
 - MetaMask handles all blockchain transactions
 - No private keys are ever transmitted
-
-## Testing
-
-```bash
-# Run unit tests
-npm run test
-
-# Run E2E tests
-npm run test:e2e
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-Please ensure your code follows the existing style conventions and includes appropriate tests.
-
-## Performance Optimization
-
-The application includes several optimizations:
-
-- Code splitting with React.lazy
-- Service worker for caching
-- WebAssembly for PDF processing
-- Efficient embedding caching
-- Optimized TensorFlow.js operations
-
-## Known Limitations
-
-- Maximum file size: 100MB
-- Supported formats: PDF only
-- Browser compatibility: Modern browsers only
-- MetaMask required for all operations
 
 ## Troubleshooting
 
