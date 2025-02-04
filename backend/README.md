@@ -126,12 +126,6 @@ npm start
 
 The server will run on `http://localhost:3001` by default.
 
-## Testing
-
-```bash
-npm test
-```
-
 ## Acknowledgments
 
 This backend is part of the ChainShare project, developed as part of a master's thesis at RWTH Aachen University in cooperation with Fraunhofer FIT.
