@@ -1,6 +1,6 @@
 # ChainShare
 
-ChainShare is a blockchain-based ecosystem for privacy-preserving and ownership-aware document sharing in Large Language Model (LLM) applications. The system enables secure knowledge sharing while ensuring fair compensation through smart contracts.
+ChainShare is a blockchain-based ecosystem for privacy-preserving and ownership-aware document sharing in Large Language Model (LLM) applications. The system enables secure knowledge sharing while ensuring fair compensation through smart contracts. [Click here to watch an introductory video about ChainShare on YouTube](https://www.youtube.com/watch?v=h-gxD1tQAVY).
 
 The theoretical foundation and implementation details of this system are described in detail in the associated master's thesis. The system implements a novel approach to document sharing that combines client-side processing, chunk-level encryption, and blockchain-based access control to create a trustless knowledge marketplace.
 
